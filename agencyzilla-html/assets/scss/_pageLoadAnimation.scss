@@ -1,0 +1,31 @@
+/***********************************
+PAGE LOAD ANIMATION
+***********************************/
+#page-load-animaiton {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 9999;
+    padding: 20px;
+    position: fixed;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    
+    display: none;
+    
+    &:after {
+        width: 100%;
+        height: 100%;
+        content: "";
+        z-index: -1;
+        opacity: 0.99;
+        line-height: 450px;
+        position: absolute;
+        background-color: #000;
+        backdrop-filter: blur(9px);
+        -webkit-backdrop-filter: blur(9px);
+        --webkit-backdrop-filter: blur(9px);
+        background-color: rgb(255 255 255 / 0%);
+    }
+}

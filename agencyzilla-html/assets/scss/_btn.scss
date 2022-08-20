@@ -1,0 +1,101 @@
+/***********************************
+   Template Default Button, Input
+***********************************/
+.btn {
+    border: 0;
+    outline: 0;
+    z-index: 1;
+    color: $white; 
+    font-size: 15px;
+    overflow: hidden;
+    font-weight: 600;
+    box-shadow: none; 
+    line-height: 20px;
+    position: relative;
+    padding: 18px 30px; 
+    text-transform: uppercase;
+    background-color: $primary;
+    @include border-radius(5px);
+    @include transition(all .3s ease);
+
+    &.btn-white {
+        color: $secondary;
+        background-color: $dark_white;
+    }
+
+    @media (max-width: 1199px) {
+        padding: 15px 28px;
+    }
+
+    @media (max-width: 575px) {
+        padding: 13px 25px;
+    }
+
+    &__animation {
+        width: 100%;
+        z-index: -1;
+        height: 100%;
+        display: none;
+        position: absolute;
+        @include transition(all .3s);
+        background-color: darken($secondary, 10%);
+    }
+    
+    i {
+        margin-left: 5px;
+
+        &:before {
+            vertical-align: middle;
+        }
+    }
+
+    &:hover, &:focus {
+        outline: 0;
+        color: $white;
+        box-shadow: none;
+        text-decoration: none;
+    }
+
+    &:focus {
+        background-color: $black;
+    }
+}
+
+
+input[type="text"]:not(.select2-input),
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="search"],
+input[type="password"],
+input[type="file"],
+select, textarea {
+    border: 0 !important;
+    width: 100% !important;
+    color: $black !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    box-shadow: none !important;
+    line-height: 26px !important;
+    padding: 28px 16px !important;
+    border-radius: 5px !important;
+    @include transition(all 0.3s ease);
+    background-color: $white !important;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    @include placeholder($secondary, 16px, 400);
+
+    @media (max-width: 1199px) {
+        padding: 25px 14px !important;
+    }
+
+    @media (max-width: 575px) {
+        padding: 23px 14px !important;
+    }
+
+    &:hover, &:focus {
+        outline: 0;
+    }
+}

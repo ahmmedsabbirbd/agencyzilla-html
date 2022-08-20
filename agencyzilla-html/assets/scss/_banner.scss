@@ -1,0 +1,88 @@
+/*** banner */
+.banner {
+    overflow: hidden;
+    padding: 195px 0 100px;
+
+    @media (max-width: 1199px) {
+        padding: 170px 0 80px;
+    }
+
+    @media (max-width: 991px) {
+        padding: 150px 0 70px;
+    }
+
+    @media (max-width: 767px) {
+        padding: 130px 0 60px;
+    }
+
+    @media (max-width: 575px) {
+        padding: 120px 0 50px;
+    }
+
+    @media (max-width: 480px) {
+        padding-top: 110px;
+    }
+
+    .scrollDown {
+        border: 0;
+        width: 60px;
+        height: 60px;  
+        color: $white;
+        font-size: 20px;
+        margin-top: 30px;
+        line-height: 60px;   
+        background: $primary;
+        @include border-radius(500px);
+        @include transition(all .3s ease);
+
+        @media (max-width: 767px) {
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+            margin-top: 20px;
+            line-height: 54px;
+        }
+
+        i {
+            display: inline-block;
+            @include transition(all .3s ease); 
+        }
+
+        &:hover {
+            background: $secondary;
+
+            i {
+                @include transform(translate(0, 5px));
+            }
+        } 
+    }
+
+    &__media {
+        margin: -82px -400px -46px 0;
+
+        @media (max-width: 1700px) {
+            margin: -82px -330px -46px 0;
+        }
+
+        @media (max-width: 1550px) {
+            margin: -60px -230px -46px 0;
+        }
+
+        @media (max-width: 1366px) {
+            margin: -60px -130px -50px 0;
+        }
+
+        @media (max-width: 1199px) {
+            margin: -50px -118px -30px 0;
+        }
+
+        @media (max-width: 991px) {
+            max-width: 600px;
+            margin: 30px auto 0;
+        }
+
+        @media (max-width: 575px) {
+            margin-top: 20px;
+        }
+    }
+}

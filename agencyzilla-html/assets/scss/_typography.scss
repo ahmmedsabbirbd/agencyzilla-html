@@ -1,0 +1,265 @@
+/***********************************
+Template Default Fonts & Fonts Styles & Heading Styles
+***********************************/
+
+// FONT SIZE
+$jo: 'Josefin Sans', sans-serif;
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    color: $black;
+    background: $white;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font: 400 18px/28px $jo;
+
+    @media (max-width: 575px) {
+        font-size: 16px;
+        line-height: 26px; 
+    }
+}
+
+h1, .h1 { 
+    font-size: 60px;
+    line-height: 70px;
+
+    @media (max-width: 1199px) {
+        font-size: 55px;
+        line-height: 75px
+    }
+
+    @media (max-width: 991px) {
+        font-size: 48px;
+        line-height: 58px
+    }
+
+    @media (max-width: 767px) {
+        font-size: 42px;
+        line-height: 52px
+    }
+
+    @media (max-width: 575px) {
+        font-size: 36px;
+        line-height: 46px
+    }
+
+    @media (max-width: 480px) {
+        font-size: 33px;
+        line-height: 43px
+    }
+
+    &.fz-lg {
+        font-size: 70px;
+        line-height: 80px;
+
+        @media (max-width: 1199px) {
+            font-size: 60px;
+            line-height: 70px;
+        }
+
+        @media (max-width: 991px) {
+            font-size: 55px;
+            line-height: 65px;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 48px;
+            line-height: 58px;
+        }
+
+        @media (max-width: 575px) {
+            font-size: 42px;
+            line-height: 52px;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 36px;
+            line-height: 46px;
+        }
+    } 
+
+}
+
+h2, .h2 {
+    font-size: 48px;
+    line-height: 58px;
+
+    @media (max-width: 991px) {
+        font-size: 42px;
+        line-height: 52px
+    } 
+
+    @media (max-width: 767px) {
+        font-size: 36px;
+        line-height: 46px
+    }
+
+    @media (max-width: 575px) {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    &.fz-sm {
+        font-size: 42px;
+        line-height: 52px; 
+
+        @media (max-width: 991px) {
+            font-size: 36px;
+            line-height: 46px;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 30px;
+            line-height: 40px;
+        }
+
+        @media (max-width: 575px) {
+            font-size: 28px;
+            line-height: 38px;
+        }
+    }
+}
+
+h3, .h3 { 
+    font-size: 36px;
+    line-height: 46px;
+
+    @media (max-width: 991px) {
+        font-size: 30px;
+        line-height: 40px; 
+    }
+
+    @media (max-width: 767px) {
+        font-size: 26px;
+        line-height: 36px;
+    }
+
+    &.fz-sm {
+        font-size: 30px;
+        line-height: 40px;
+
+        @media (max-width: 991px) {
+            font-size: 26px;
+            line-height: 36px; 
+        }
+
+        @media (max-width: 767px) {
+            font-size: 24px;
+            line-height: 34px; 
+        }
+    }
+}
+
+h4, .h4 {
+    font-size: 24px;
+    line-height: 34px;
+
+    @media (max-width: 767px) {
+        font-size: 22px;
+        line-height: 32px; 
+    }
+}
+
+h5, .h5 {
+    font-size: 20px;
+    line-height: 30px;
+} 
+
+h6, .h6 {
+    font-size: 18px;
+    line-height: 28px;
+} 
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { 
+    margin: 0;
+    font-weight: 700;
+    color: $secondary;
+}
+
+a, button {
+
+    &:hover, &:focus {
+        outline: 0;
+        text-decoration: none;
+    }
+}
+
+p {
+    margin: 0 0 30px;
+}
+
+hr {
+    margin: 0;
+    padding: 0;
+    border-width: 1px;
+    border-color: $primary;
+}
+
+section {
+    padding: 40px 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1230px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.container-fluid {
+    max-width: 1530px; 
+}
+
+.content-area {
+    overflow: hidden;
+}
+
+.entry-title {
+
+    span {
+        color: $primary;
+    }
+
+    .white {
+        color: $white;
+    }
+
+    .sub-title {
+        margin-bottom: 5px;
+    }
+
+    .title {
+        margin-bottom: 10px;
+
+        @media (max-width: 767px) {
+            margin-bottom: 5px;
+        }
+    }
+
+    .description {
+
+        p + p {
+            margin-top: 10px;
+        }
+    }
+
+    .btn {
+        margin-top: 30px;
+
+        @media (max-width: 767px) {
+            margin-top: 20px;
+        }
+    }
+}
+
+.section-padding {
+    padding: 120px 0;
+
+    @media (max-width: 1199px) { padding: 100px 0; }
+    @media (max-width: 991px) { padding: 80px 0; }
+    @media (max-width: 767px) { padding: 60px 0; }
+    @media (max-width: 575px) { padding: 50px 0; }
+}
