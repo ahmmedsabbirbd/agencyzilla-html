@@ -212,6 +212,17 @@
                         }
                     }
                 }
+
+                &.active {
+
+                    a {
+                        color: $primary;
+
+                        &:before {
+                            @include transform(scaleX(1));
+                        }
+                    }
+                }
             }
         }
     }

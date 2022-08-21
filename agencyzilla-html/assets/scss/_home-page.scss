@@ -1,0 +1,11 @@
+/*** Home Style */
+.latest-news {
+
+    &__content {
+        margin-bottom: 30px;
+
+        @media (max-width: 767px) {
+            margin-bottom: 20px; 
+        }
+    }
+}

@@ -263,3 +263,189 @@ section {
     @media (max-width: 767px) { padding: 60px 0; }
     @media (max-width: 575px) { padding: 50px 0; }
 }
+
+.entry-content {
+
+    h1, .h1, h2, .h2, h3, .h3, h4, 
+    .h4, h5, .h5, h6, .h6 { 
+        margin-bottom: 10px;
+
+        @media (max-width: 575px) {
+            margin-bottom: 8px;
+        }
+    } 
+
+    .btn { 
+        margin-top: 10px;
+        box-shadow: 0px 24px 36px rgba(0, 0, 0, 0.16); 
+
+        @media (max-width: 575px) {
+            margin-bottom: 8px;
+        }
+
+        + .btn {
+            margin-left: 12px;
+        }
+    } 
+
+    hr {
+        margin: 40px 0;
+
+        @media (max-width: 575px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    p {
+        margin: 0 0 30px;
+
+        @media (max-width: 575px) {
+            margin: 0 0 25px;
+        }
+
+        &:last-child {
+            margin: 0;
+        }
+
+        a:not(.btn) { 
+            font-weight: 700;
+            text-decoration: underline;
+            @include transition(all 0.3s ease);
+
+            &:hover, &:focus {
+                color: $primary;
+            }
+        }
+
+        img {
+            @include border-radius(36px);
+            
+            @media (max-width: 767px) {
+                @include border-radius(26px);
+            }
+
+            @media (max-width: 575px) {
+                @include border-radius(12px);
+            }
+        }
+    }
+
+    .btn {
+        margin-bottom: 40px;
+
+        @media (max-width: 575px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    a:not(.btn) {
+
+        &:hover, &:focus {
+            color: $primary;
+        }
+    }
+
+    ul {
+        list-style: none;
+
+        li {
+            padding-left: 15px;
+            position: relative;
+
+            @media (max-width: 575px) {
+                margin-bottom: 12px;
+            }
+
+            &:before {
+                left: 0;
+                content: "•";
+                color: $primary;
+                position: absolute;
+            }
+
+            ul {
+                margin-top: 15px;
+                margin-bottom: 20px;
+
+                @media (max-width: 575px) {
+                    margin-top: 12px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+
+    ol {
+        list-style: none;
+        counter-reset: section;
+
+        li {
+            position: relative;
+
+            &:before {
+                counter-increment: section; 
+                content: counters(section, ".") ". ";
+            }
+
+            ol {
+                margin-left: 0;
+                margin-top: 20px;
+                margin-bottom: 20px;
+
+                @media (max-width: 575px) {
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                }
+
+                li {
+                    padding-left: 35px;
+
+                    @media (max-width: 575px) {
+                        padding-left: 30px;
+                    }
+
+                    ol {
+
+                        li {
+                            padding-left: 50px;
+
+                            @media (max-width: 575px) {
+                                padding-left: 45px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ul, ol {
+        padding: revert;
+        margin-bottom: 30px;
+
+        @media (max-width: 575px) {
+            margin-bottom: 25px;
+        }
+
+        &.list-unstyled {
+            padding: 0;
+            list-style: none;
+
+            li {
+                padding-left: 0;
+
+                &:before {
+                    display: none;
+                }
+            }
+        }
+
+        li {
+            margin-bottom: 15px;
+
+            @media (max-width: 575px) {
+                margin-bottom: 12px;
+            }
+        }
+    }
+}
