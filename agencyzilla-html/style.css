@@ -36,7 +36,7 @@ html {
 }
 
 /***********************************
-    Template All Variables Defined - Value Change with Your's Need
+Template All Variables Defined - Value Change with Your's Need
 ***********************************/
 /***********************************
 Template Default Fonts & Fonts Styles & Heading Styles
@@ -1008,7 +1008,7 @@ PAGE LOAD ANIMATION
 }
 .btn.btn-white {
   color: #211E3B;
-  background-color: #f1f1f1;
+  background-color: #E7FAF7;
 }
 @media (max-width: 1199px) {
   .btn {
@@ -1205,7 +1205,7 @@ select:focus, textarea:hover, textarea:focus {
   width: 100%;
   z-index: 1030;
   position: fixed;
-  background-color: #f1f1f1;
+  background-color: #E7FAF7;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -1213,7 +1213,7 @@ select:focus, textarea:hover, textarea:focus {
   background: transparent;
 }
 .header.stop {
-  background-color: #f1f1f1;
+  background-color: #E7FAF7;
 }
 .header.stop .navbar {
   padding: 15px 0;
@@ -1365,7 +1365,7 @@ select:focus, textarea:hover, textarea:focus {
   min-width: 250px;
   visibility: hidden;
   top: calc(100% + 25px);
-  background-color: #f1f1f1;
+  background-color: #E7FAF7;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -1377,7 +1377,7 @@ select:focus, textarea:hover, textarea:focus {
   height: 10px;
   z-index: -1;
   position: absolute;
-  background: #f1f1f1;
+  background: #E7FAF7;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   border-top: 1px solid rgba(0, 0, 0, 0.15);
@@ -1532,7 +1532,7 @@ select:focus, textarea:hover, textarea:focus {
   max-width: 340px;
   overflow-y: auto;
   overflow-x: hidden;
-  background: #f1f1f1;
+  background: #E7FAF7;
   -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
 }
@@ -1650,7 +1650,7 @@ select:focus, textarea:hover, textarea:focus {
           box-shadow: none;
   padding-top: 15px;
   position: absolute;
-  background: #f1f1f1;
+  background: #E7FAF7;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   -webkit-transform: translate3d(110%, 0, 0);
@@ -2354,7 +2354,7 @@ select:focus, textarea:hover, textarea:focus {
 .footer {
   overflow: hidden;
   padding: 80px 0 40px;
-  background: #f1f1f1;
+  background: #E7FAF7;
 }
 @media (max-width: 1199px) {
   .footer {

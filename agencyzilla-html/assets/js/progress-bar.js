@@ -1,7 +1,7 @@
 /*** Pogress bar */
 $(window).load(function() {
     // Append progress bar header
-    $( ".header" ).append( '<progress value="0" max="100" class="agencyzilla-progress-bar" data-foreground="#16cd00" data-background="#ffffff" data-height="5" data-position="top"></progress>' );
+    $( ".header" ).append( '<progress value="0" max="100" class="agencyzilla-progress-bar" data-foreground="#16cd00" data-background="#f1f1f1" data-height="5" data-position="top"></progress>' );
 
     // Maximum value for the progressbar
     var winHeight = $(window).height(),
