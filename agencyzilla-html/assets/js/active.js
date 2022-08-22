@@ -268,4 +268,108 @@ Author: https://themeforest.net/user/ahmmedsabbirbd
         slidesToScroll: 1
     });
 
+    /*** Clients Slider */
+    var clientstime = 5;
+    var $clientsbar,
+        $clientsslick,
+        clientsisPause,
+        clientstick,
+        clientspercentTime;
+
+    $clientsslick = $('.clients-slider');
+
+    $clientsslick.slick({
+        autoplay: true,
+        speed: 300,
+        dots: true,
+        arrows: false,
+        infinite: true,
+        slidesToShow: 1,
+        initialSlide: 1,
+        centerMode: true,
+        slidesToScroll: 1,
+        appendDots: $('.clients_slider_control'),
+        centerPadding: '730px 0 0',
+        responsive: [ 
+            {
+                breakpoint: 1461,
+                settings: {   
+                    centerPadding: '650px 0 0',
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: { 
+                    centerPadding: '450px 0 0',
+                }
+            } ,
+            {
+                breakpoint: 992,
+                settings: { 
+                    centerPadding: '240px 0 0',
+                }
+            }  ,
+            {
+                breakpoint: 768,
+                settings: { 
+                    centerPadding: '150px 0 0',
+                }
+            }  ,
+            {
+                breakpoint: 576,
+                settings: { 
+                    centerPadding: '100px 0 0',
+                }
+            }  ,
+            {
+                breakpoint: 481,
+                settings: { 
+                    centerPadding: '65px 0 0',
+                }
+            } 
+        ]
+    })
+
+    $clientsbar = $('.clients_slider_control .slider-progress .progress');
+
+    $clientsslick.on({
+        mouseenter: function() {
+            clientsisPause = true;
+        },
+        mouseleave: function() {
+            clientsisPause = false;
+        }
+    })
+
+    function startProgressbar_clients() {
+        resetProgressbar_clients();
+        clientspercentTime = 0;
+        clientsisPause = false;
+        clientstick = setInterval(interval_clients, 5);
+    }
+
+    function interval_clients() {
+        if( clientsisPause === false ) 
+        {
+            clientspercentTime += 1 / (clientstime+0.1);
+            $clientsbar.css({
+                width: clientspercentTime+"%"
+            });
+
+            if(clientspercentTime >= 100)
+            {
+                $clientsslick.slick('slickNext');
+                startProgressbar_clients();
+            }
+        }
+    }
+
+    function resetProgressbar_clients() {
+        $clientsbar.css({
+            width: 0+'%' 
+        });
+        clearTimeout(clientstick);
+    }
+    startProgressbar_clients();
+
 }(jQuery));
