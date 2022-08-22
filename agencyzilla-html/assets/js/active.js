@@ -254,4 +254,18 @@ Author: https://themeforest.net/user/ahmmedsabbirbd
         }
     });
 
+    /*** brands-logo-slider */
+    $('.brands-logo-slider-wrapper').slick({
+        dots: false,
+        autoplay: true,
+        speed: 5000,
+        arrows: false,
+        infinite: true,
+        slidesToShow: 6,
+        autoplaySpeed: 0,
+        cssEase: 'linear',
+        centerMode: true,
+        slidesToScroll: 1
+    });
+
 }(jQuery));
