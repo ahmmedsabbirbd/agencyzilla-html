@@ -1,5 +1,4 @@
 /*** Home Style */
-
 .brands-logo {
 
     &__content {
@@ -310,6 +309,83 @@
 
         @media (max-width: 767px) {
             margin-bottom: 20px; 
+        }
+    }
+}
+
+.our-services {
+
+    .mb-30 {
+        margin-bottom: -30px;
+    }
+
+    &__content {
+        margin-bottom: 30px;
+
+        @media (max-width: 767px) {
+            margin-bottom: 20px; 
+        }
+    }
+}
+
+.people-likes {
+
+    .mb-30 {
+        margin-bottom: -30px;
+
+        @media (max-width: 480px) {
+
+            >[class*="col"] {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__content {
+        margin-bottom: 30px;
+
+        @media (max-width: 767px) {
+            margin-bottom: 20px; 
+        }
+    }
+
+    &__item {
+        min-height: 280px; 
+        overflow: hidden;
+        margin-bottom: 30px;
+        @include border-radius(36px);
+        background-color: $dark_white;
+
+        @media (max-width: 991px) {
+            min-height: 250px; 
+        }
+
+        @media (max-width: 767px) {
+            @include border-radius(24px);
+        }
+
+        @media (max-width: 575px) {
+            @include border-radius(14px);
+        }
+
+        &:hover {
+
+            .icon {
+                animation: shake 0.5s linear 1;
+            }
+        }
+
+        .icon {
+            color: $primary;
+            font-size: 70px;
+            margin-bottom: 20px;
+        }
+
+        .number {
+            font-size: 30px;
+            line-height: 30px;
+            margin-bottom: 5px;
         }
     }
 }
