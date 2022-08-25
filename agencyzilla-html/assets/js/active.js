@@ -372,4 +372,22 @@ Author: https://themeforest.net/user/ahmmedsabbirbd
     }
     startProgressbar_clients();
 
+    /*** pricing table */
+    var pricingSwitcher = document.getElementById("switcher"),
+    pricingMonthly = document.getElementById("monthly"),
+    pricingYearly = document.getElementById("yearly");
+
+    if ( pricingSwitcher ) {
+        pricingSwitcher.addEventListener("click", function(){
+
+            if ( pricingSwitcher.checked == true ) {
+                pricingMonthly.classList.add("hide");   
+                pricingYearly.classList.remove("hide");
+            } else { 
+                pricingMonthly.classList.remove("hide");   
+                pricingYearly.classList.add("hide");   
+            }
+        });
+    }
+
 }(jQuery));

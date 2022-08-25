@@ -1,0 +1,310 @@
+/*** Pricing table */
+.pricing {
+	padding: 50px 0 75px;
+
+	.mb-30 {
+		margin-bottom: -30px;
+	}
+
+	.pricing-item-wraper {
+		margin: 45px 0 50px;
+	} 
+
+	&__content {
+
+		.title {
+			margin-bottom: 10px;
+		}
+
+		p {
+
+			+ p {
+				margin-top: 10px;
+			}
+		}
+	}
+
+	&__controller {
+		padding: 16px 30px;
+		border-radius: 500px;
+		display: inline-block;
+		background: linear-gradient(165deg, #ffe0f5 0%, #cad1fc 49.75%, #d1f7ff 100%);
+
+		label {
+			font-size: 18px;
+			color: $primary;
+			font-weight: 600;
+			line-height: 26px;
+			@include letter-spacing(-30, 18);
+		}
+
+		.toggle {
+		  margin: 0 12px;
+		  display: inline-block;
+		  vertical-align: middle;
+		}  
+
+		.b {
+		  display: block;
+		}
+
+		.toggle {
+		  width: 78px;
+		  height: 40px;
+		  overflow: hidden;
+		  position: relative;
+		  border-radius: 20px;
+		  background: linear-gradient(135deg, #ef66c5 0%, #364ddd 49.75%, #00bfe8 100%);
+
+			.check {
+				top: 0;
+				left: 0;
+				z-index: 6;
+				opacity: 0;
+				width: 100%;
+				height: 100%;
+				display: block;
+				cursor: pointer;
+				position: absolute;
+
+				&:checked ~ .switch {
+					right: 4px;
+					left: 53.85%;
+					transition: 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+					transition-property: left, right;
+					transition-delay: .08s, 0s;
+				}
+			}
+		} 
+
+		.switch {
+			top: 4px;
+			left: 4px;
+			z-index: 1;
+			bottom: 4px;
+			right: 53.85%; 
+			position: absolute;
+			border-radius: 36px;
+			background-color: #fff;
+			box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+			transition: 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+			transition-property: left, right;
+			transition-delay: 0s, .08s;
+		}
+	}
+
+	&__card {
+		overflow: hidden;
+		background: $white; 
+		margin-bottom: 30px;
+		border-radius: 36px; 
+		padding: 45px 50px;
+		@include transition(all .3s ease);
+		box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.04);
+
+		&.popuar {  
+			z-index: 1;
+			padding-top: 90px;
+			position: relative;
+
+			&:after { 
+				top: 0;
+				left: 0;
+				width: 100%;
+				z-index: -1;
+				content: "";
+				height: 100%; 
+				position: absolute;  
+				border-radius: 36px;
+				background-origin: border-box;
+				border: double 4px transparent;
+				background-clip: content-box, border-box;
+				background-image: linear-gradient(white, white), radial-gradient(circle at top left, #ef66c5 0%, #364ddd 49.75%, #00bfe8 100%);
+			} 
+
+			.popuar__text {
+				top: 0; 
+				color: $white;
+				font-size: 24px;
+				font-weight: 700;
+				line-height: 34px;
+				position: absolute;
+				display: inline-block;
+				left: calc(50% - 175px);
+				padding: 11px 98px 9px;
+				border-radius: 0 0 22px 22px;
+				@include letter-spacing(-30, 24);
+				background: linear-gradient(135deg, #ef66c5 0%, #364ddd 49.75%, #00bfe8 100%);
+			}
+
+			.pricing__card-header {
+
+				.sub-title {
+					color: #364DDD;
+				}
+			}
+
+			.pricing__card-body .btn {
+				border: none;
+				color: $white;
+				padding: 16.01px 24.5px;
+				background: linear-gradient(135deg, #ef66c5 0%, #364ddd 49.75%, #00bfe8 100%); 
+
+				&:hover {
+					background: $primary;
+				}
+			}
+		}
+
+		&-header {
+			margin-bottom: 20px;
+
+			.sub-title {    
+				color: #0CA1CE;  
+				@include transition(all .3s ease);
+			}
+
+			.title {  
+				@include transition(all .3s ease);
+
+				span {
+
+					&:before {
+						top: 0;
+						left: 0;
+						content: "$"; 
+					}
+				}
+			}
+
+			p { 
+				@include transition(all .3s ease);
+
+				a {
+					text-decoration: underline;
+				}
+
+				+ p {
+					margin-top: 10px;
+				}
+			}
+		}
+
+		&-body {
+
+			ul {
+				margin-bottom: 0;
+				padding-left: 20px;
+				margin-bottom: -14px;
+
+				li {
+					font-weight: 700;
+					margin-bottom: 14px;
+					@include transition(all .3s ease);
+				}
+			}
+
+			.btn {
+				margin-top: 25px;
+			}
+		}
+
+		&.varies {
+			background: $primary;
+
+			.pricing__card {
+
+				&-header {
+
+					.sub-title {
+						color: #CAD1FC;
+					}
+
+					.title {
+						color: $white;
+					}
+
+					p {
+						color: $white;
+
+						strong {
+							color: #CAD1FC;
+						}
+
+						a {
+							color: #CAD1FC;
+						}
+					}
+				}
+
+				&-body {
+
+					ul {
+
+						li {
+							color: $white;
+						}
+					}
+
+					.btn {
+						color: $white;
+						border-color: $white;
+						background: transparent;
+
+						&:hover {
+							background: $white;
+							color: $black;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&-bottom {
+		column-gap: 30px;
+		background: #fff;
+		border-radius: 16px;
+		padding: 34px 145px 4px 36px;
+		box-shadow: 0px 36px 56px rgba(0, 0, 0, 0.04);
+
+		&__content {
+			margin-bottom: 30px;
+
+			.sub-title {
+				color: #707C9F;
+				font-size: 24px;
+				list-style: 34px;
+				font-weight: 700;
+				@include letter-spacing(-25, 24);
+			}
+
+			&-ul-wraper {
+				margin-top: 15px;
+				margin-bottom: -30px;
+
+				ul {
+					column-count: 2; 
+					column-gap: 50px;
+					padding-left: 20px;
+					margin-bottom: 11.5px;
+
+					li {
+						font-size: 18px;
+						font-weight: 700;
+						line-height: 18px;
+						margin-bottom: 18.5px;
+					}
+				}
+			}
+
+			&-btn {
+				margin-bottom: 30px;
+			}
+		}
+	}
+}
+
+.hide {
+	display: none;
+}
