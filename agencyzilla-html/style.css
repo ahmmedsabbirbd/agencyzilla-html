@@ -948,7 +948,6 @@ PAGE LOAD ANIMATION
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  display: none;
 }
 #page-load-animaiton:after {
   width: 100%;

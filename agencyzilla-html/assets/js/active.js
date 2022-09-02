@@ -6,25 +6,25 @@ Author: https://themeforest.net/user/ahmmedsabbirbd
 (function ($) {
 
     /*** Page Load Animation */
-    // const pageLoadAnimation = document.querySelector("#page-load-animaiton");
-    // window.addEventListener("load", (event) => {
-    //     setTimeout(function(){ 
-    //         pageLoadAnimation.parentElement.removeChild(pageLoadAnimation);
+    const pageLoadAnimation = document.querySelector("#page-load-animaiton");
+    window.addEventListener("load", (event) => {
+        setTimeout(function(){ 
+            pageLoadAnimation.parentElement.removeChild(pageLoadAnimation);
             
-    //         /*** AOS */
-    //         AOS.init({
-    //             once: true,
-    //             offset: 100,
-    //             duration: 900,
-    //         });
+            /*** AOS */
+            AOS.init({
+                once: true,
+                offset: 100,
+                duration: 900,
+            });
 
-    //         /*** Number Counter */
-    //         $('.counter').counterUp({
-    //             delay: 10,
-    //             time: 1000
-    //         });
-    //     }, 5000);
-    // });
+            /*** Number Counter */
+            $('.counter').counterUp({
+                delay: 10,
+                time: 1000
+            });
+        }, 5000);
+    });
 
     /*** Sticky header */
     $(window).scroll(function(){
