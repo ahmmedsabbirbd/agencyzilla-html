@@ -2732,6 +2732,7 @@ select:focus, textarea:hover, textarea:focus {
   background-color: #000;
 }
 
+/*** Services page */
 /*** Our services */
 .our-services__item {
   display: block;
