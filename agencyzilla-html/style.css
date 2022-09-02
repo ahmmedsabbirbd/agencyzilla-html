@@ -1701,6 +1701,14 @@ select:focus, textarea:hover, textarea:focus {
     padding-top: 110px;
   }
 }
+.banner.services .banner__content {
+  max-width: 600px;
+}
+@media (max-width: 991px) {
+  .banner.services .banner__content {
+    max-width: 100%;
+  }
+}
 .banner .background {
   top: 0;
   left: 0;
@@ -2732,7 +2740,6 @@ select:focus, textarea:hover, textarea:focus {
   background-color: #000;
 }
 
-/*** Services page */
 /*** Our services */
 .our-services__item {
   display: block;

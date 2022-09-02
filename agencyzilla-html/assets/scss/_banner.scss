@@ -24,6 +24,17 @@
         padding-top: 110px;
     }
 
+    &.services {
+
+        .banner__content {
+            max-width: 600px;
+
+            @media (max-width: 991px) {
+                max-width: 100%;
+            }
+        }
+    }
+
     .background {
         top: 0;
         left: 0;
