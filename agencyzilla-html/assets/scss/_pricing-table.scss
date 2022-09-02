@@ -1,6 +1,5 @@
 /*** Pricing table */
 .pricing {
-	padding: 50px 0 75px;
 
 	.mb-30 {
 		margin-bottom: -30px;
@@ -26,22 +25,37 @@
 
 	&__controller {
 		padding: 16px 30px;
-		border-radius: 500px;
 		display: inline-block;
-		background: linear-gradient(165deg, #ffe0f5 0%, #cad1fc 49.75%, #d1f7ff 100%);
+		background: $bg_gradient;
+		@include border-radius(500px);
+
+		@media (max-width: 767px) {
+			margin-top: 20px;
+			padding: 12px 22px;
+		}
 
 		label {
-			font-size: 18px;
-			color: $primary;
+			color: $white;
+			font-size: 16px;
 			font-weight: 600;
-			line-height: 26px;
-			@include letter-spacing(-30, 18);
+			line-height: 24px;
+			@include letter-spacing(-100, 16);
+
+			@media (max-width: 767px) {
+				font-size: 15px;
+				line-height: 23px;
+				@include letter-spacing(-100, 15);
+			}
 		}
 
 		.toggle {
-		  margin: 0 12px;
-		  display: inline-block;
-		  vertical-align: middle;
+		  	margin: 0 12px;
+		  	display: inline-block;
+		  	vertical-align: middle;
+
+		  	@media (max-width: 767px) {
+		  		margin: 0 8px;
+			}
 		}  
 
 		.b {
@@ -49,12 +63,17 @@
 		}
 
 		.toggle {
-		  width: 78px;
-		  height: 40px;
-		  overflow: hidden;
-		  position: relative;
-		  border-radius: 20px;
-		  background: linear-gradient(135deg, #ef66c5 0%, #364ddd 49.75%, #00bfe8 100%);
+			width: 78px;
+			height: 40px;
+			overflow: hidden;
+			position: relative;
+			background: $primary;
+			@include border-radius(20px);
+
+			@media (max-width: 767px) {
+				width: 70px;
+				height: 35px;
+			}
 
 			.check {
 				top: 0;
@@ -84,8 +103,8 @@
 			bottom: 4px;
 			right: 53.85%; 
 			position: absolute;
-			border-radius: 36px;
 			background-color: #fff;
+			@include border-radius(36px);
 			box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 			transition: 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 			transition-property: left, right;
@@ -97,10 +116,15 @@
 		overflow: hidden;
 		background: $white; 
 		margin-bottom: 30px;
-		border-radius: 36px; 
 		padding: 45px 50px;
+		@include border-radius(36px); 
 		@include transition(all .3s ease);
 		box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.04);
+
+		@media (max-width: 767px) {
+			padding: 30px 25px;
+			@include border-radius(16px); 
+		}
 
 		&.popuar {  
 			z-index: 1;
@@ -115,11 +139,15 @@
 				content: "";
 				height: 100%; 
 				position: absolute;  
-				border-radius: 36px;
+				@include border-radius(36px);
 				background-origin: border-box;
 				border: double 4px transparent;
 				background-clip: content-box, border-box;
 				background-image: linear-gradient(white, white), radial-gradient(circle at top left, #ef66c5 0%, #364ddd 49.75%, #00bfe8 100%);
+
+				@media (max-width: 767px) {
+					@include border-radius(16px); 
+				}
 			} 
 
 			.popuar__text {
@@ -132,26 +160,38 @@
 				display: inline-block;
 				left: calc(50% - 175px);
 				padding: 11px 98px 9px;
-				border-radius: 0 0 22px 22px;
-				@include letter-spacing(-30, 24);
-				background: linear-gradient(135deg, #ef66c5 0%, #364ddd 49.75%, #00bfe8 100%);
+				background: $bg_gradient;
+				@include border-radius(0 0 22px 22px);
+
+				@media (max-width: 1199px) {
+					font-size: 20px;
+					line-height: 30px;
+					left: calc(50% - 161px);
+				} 
+
+				@media (max-width: 767px) {
+					font-size: 18px;
+					padding: 8px 58px;
+					line-height: 28px;
+					left: calc(50% - 115.68px);
+				} 
 			}
 
 			.pricing__card-header {
 
 				.sub-title {
-					color: #364DDD;
+					color: $textcolor;
 				}
 			}
 
 			.pricing__card-body .btn {
 				border: none;
 				color: $white;
-				padding: 16.01px 24.5px;
-				background: linear-gradient(135deg, #ef66c5 0%, #364ddd 49.75%, #00bfe8 100%); 
+				padding: 16px 24px;
+				background: $bg_gradient;
 
-				&:hover {
-					background: $primary;
+				@media (max-width: 767px) {
+					padding: 15px 20px;
 				}
 			}
 		}
@@ -160,7 +200,7 @@
 			margin-bottom: 20px;
 
 			.sub-title {    
-				color: #0CA1CE;  
+				color: $textcolor;  
 				@include transition(all .3s ease);
 			}
 
@@ -201,11 +241,20 @@
 					font-weight: 700;
 					margin-bottom: 14px;
 					@include transition(all .3s ease);
+
+					@media (max-width: 767px) {
+						font-size: 16px;
+						line-height: 26px;
+					}
 				}
 			}
 
 			.btn {
 				margin-top: 25px;
+
+				@media (max-width: 767px) {
+					padding: 15px 20px;
+				}
 			}
 		}
 
@@ -217,22 +266,27 @@
 				&-header {
 
 					.sub-title {
-						color: #CAD1FC;
+						color: $white;
 					}
 
 					.title {
 						color: $white;
+
+						@media (max-width: 1199px) {
+							font-size: 30px;
+							line-height: 40px;
+						}
 					}
 
 					p {
 						color: $white;
 
 						strong {
-							color: #CAD1FC;
+							color: $white;
 						}
 
 						a {
-							color: #CAD1FC;
+							color: $white;
 						}
 					}
 				}
@@ -247,13 +301,11 @@
 					}
 
 					.btn {
-						color: $white;
-						border-color: $white;
-						background: transparent;
+						color: $black;
+						background: $white;
 
-						&:hover {
-							background: $white;
-							color: $black;
+						&:hover, &:focus {
+							color: $dark_white;
 						}
 					}
 				}
@@ -264,19 +316,27 @@
 	&-bottom {
 		column-gap: 30px;
 		background: #fff;
-		border-radius: 16px;
-		padding: 34px 145px 4px 36px;
+		padding: 30px 25px;
+		@include border-radius(16px);
 		box-shadow: 0px 36px 56px rgba(0, 0, 0, 0.04);
+
+		@media (max-width: 480px) {
+			padding: 25px 20px;
+		}
 
 		&__content {
 			margin-bottom: 30px;
 
 			.sub-title {
-				color: #707C9F;
 				font-size: 24px;
 				list-style: 34px;
 				font-weight: 700;
-				@include letter-spacing(-25, 24);
+				color: $textcolor;
+
+				@media (max-width: 767px) {
+					font-size: 20px;
+					list-style: 30px;
+				}
 			}
 
 			&-ul-wraper {
@@ -289,11 +349,20 @@
 					padding-left: 20px;
 					margin-bottom: 11.5px;
 
+					@media (max-width: 767px) {
+						column-gap: 15px; 
+					}
+
 					li {
 						font-size: 18px;
 						font-weight: 700;
 						line-height: 18px;
 						margin-bottom: 18.5px;
+
+						@media (max-width: 767px) {
+							font-size: 16px;
+							line-height: 16px;
+						}
 					}
 				}
 			}
